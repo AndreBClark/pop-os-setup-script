@@ -1,12 +1,8 @@
-#!bin/zsh
-. ./functions.sh && init_functions
+#!/bin/bash
+# check if bitwarden is installed with flatpak
+bitwarden=/usr/share/flatpak/installations/bitwarden.flatpakref
+if [ -f $bitwarden ]; then
+  exit 0
+fi
 
-bitwarden="~/Downloads/bitwarden.AppImage"
-
-# download bitwarden AppImage from https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=appimage
-curl -fsSL "https://vault.bitwarden.com/download/?app=desktop&platform=linux&variant=appimage" -o $HOME/Downloads/bitwarden.AppImage
-
-cd $HOME/Downloads
-sudo chmod +x ~ bitwarden.AppImage
-
-installStatus $bitwarden
+./functions/runner.sh $bitwarden "flatpak install flathub com.bitwarden.desktop"

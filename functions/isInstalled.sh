@@ -1,4 +1,4 @@
-#!bin/sh
+#!/bin/sh
 
 # create function accepts a file path string
 # checks if the file is installed
@@ -6,7 +6,7 @@
 # if yes, it exits the script
 # if not, it continues the script
 isInstalled() {
-  if [ -f `which $1` ]; then
+  if [ -f "$(which $1)" ]; then
     echo "$1 is already installed! skipping.."
     exit 0
   else
@@ -14,5 +14,5 @@ isInstalled() {
     exit 1
   fi
 }
-# export the function
-export isInstalled
+# execute function with arguments when script is called
+isInstalled "$1"

@@ -1,11 +1,10 @@
-#!bin/bash
-sudo apt update
-sudo apt upgrade
-sudo apt dist-upgrade
-sudo apt autoremove
-sudo apt autoclean
-sudo fwupdmgr get-devices
-sudo fwupdmgr get-updates
-sudo fwupdmgr update
+#!/bin/bash
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt dist-upgrade -y
+sudo apt autoremove -y
+sudo apt autoclean -y
+sudo fwupdmgr get-devices -y
+sudo fwupdmgr get-updates -y
+sudo fwupdmgr update -y
 flatpak update
-sudo reboot now

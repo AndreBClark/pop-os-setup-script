@@ -1,4 +1,4 @@
-# run all scriptsin the utils folder
+#!/bin/bash
 function exec_utils() {
     for file in $(ls utils/*.sh); do
         echo "Running $file"

@@ -1,6 +1,4 @@
-#!bin/bash
-. ./installs/functions.sh && init_functions
+#!/bin/bash
+./functions/isRoot.sh
 
-isRoot
-
-runner "zsh --version" "sudo apt-get install zsh | chsh -s $(which zsh) | source~/.zshrc | exec zsh"
+./functions/runner.sh "zsh" "sudo apt-get install zsh | chsh -s $(which zsh) | source~/.zshrc | exec zsh"

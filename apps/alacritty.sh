@@ -1,9 +1,3 @@
-if ! isInstalled alacritty; then
-  sudo apt-get install alacritty
-#!bin/sh
-. ./functions.sh && init_functions
+#!/bin/bash
 
-alacritty=`alacritty -v`
-
-
-runner $alacritty "sudo apt-get install alacritty"
+./functions/runner.sh "alacritty" "sudo apt-get install -y alacritty"

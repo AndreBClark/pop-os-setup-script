@@ -1,4 +1,2 @@
-#!bin/bash
-. ./installs/functions.sh && init_functions
-
-runner `discord --version` "sudo apt-get install discord"
+#!/bin/bash
+./functions/runner.sh "discord" "sudo apt-get install -y discord"
