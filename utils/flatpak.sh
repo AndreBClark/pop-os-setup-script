@@ -1,5 +1,5 @@
 #!/bin/bash
-./functions/runner.sh flatpak "sudo apt install flatpak"
+./functions/runner.sh flatpak "sudo apt install -y flatpak"
 
 if [ ! -d ~/.local/share/flatpak/repos ]; then
     flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

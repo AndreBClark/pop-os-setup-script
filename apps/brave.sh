@@ -1,6 +1,6 @@
 #!/bin/bash
 scripts=(
-"sudo apt install apt-transport-https curl"
+"sudo apt install -y apt-transport-https curl"
 
 "$(sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg)"
 
@@ -8,7 +8,7 @@ scripts=(
 
 "sudo apt update"
 
-"sudo apt install brave-browser"
+"sudo apt install -y brave-browser"
 )
 
 ./functions/runner.sh "brave" "${scripts[@]}"
