@@ -1,4 +1,4 @@
 #!/bin/bash
-./functions/isRoot.sh
+"$PWD/functions/isRoot.sh"
 
-./functions/runner.sh "zsh" "sudo apt-get install -y zsh | chsh -s $(which zsh) | source~/.zshrc | exec zsh"
+"$PWD/functions/runner.sh" "zsh" "sudo apt install -y zsh | chsh -s $(which zsh) | source~/.zshrc | exec zsh"setupnord 
