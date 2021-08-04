@@ -1,8 +1,3 @@
 #!/bin/bash
+./functions/batch_run.sh ./shell
 
-function exec_shell() {
-    . ./installs/functions.sh && init_functions
-    batch_run ./shell
-}
-
-exec_shell
