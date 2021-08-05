@@ -8,3 +8,4 @@ sudo fwupdmgr get-devices -y
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 flatpak update
+unalias cp
