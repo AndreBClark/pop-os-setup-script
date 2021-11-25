@@ -22,11 +22,12 @@ runner () {
     done
     # if the last command was successful, then exit 0
     if ! $packageName ; then
+          echo "ERROR: The installation of $packageName has failed."
+      exit 1
+
+    else
       echo "SUCCESS: The installation of $packageName has completed successfully."
       exit 0
-    else
-      echo "ERROR: The installation of $packageName has failed."
-      exit 1
     fi
   fi
 }

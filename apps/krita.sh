@@ -1,2 +1,2 @@
 #!/bin/bash
-./functions/runner.sh "krita" "sudo apt-get install -y krita"
+./functions/runner.sh "sudo apt-get install -y krita"
