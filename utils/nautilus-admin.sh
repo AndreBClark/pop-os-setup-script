@@ -1,2 +1,7 @@
 #!/bin/bash
-# ./functions/runner.sh "nautilus-admin" "sudo apt install -y nautilus-admin" "nautilus -q"
+./functions/runner.sh "${scripts[@]}"
+scripts=(
+  "nautilus-admin"
+  "sudo apt install -y nautilus-admin"
+  "nautilus -q"
+)

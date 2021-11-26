@@ -1,2 +1,2 @@
 #!/bin/bash
-./functions/runner.sh "code" "sudo apt-get install code -y"
+./functions/runner.sh "code" "sudo apt-get update" "sudo apt-get install code -y"
