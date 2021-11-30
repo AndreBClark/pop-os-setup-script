@@ -17,3 +17,9 @@ tar xf Zafiro-icons-Dark-Pop-os-release.tar.xz -C ~/.local/share/icons && rm Zaf
 gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-Darker-Cosmic'
 gsettings set org.gnome.desktop.wm.preferences theme 'Nordic-Darker-Cosmic'
 gsettings set org.gnome.desktop.interface icon-theme 'Zafiro-icons-Dark-Pop-os'
+# set background to home/andre/.themes/Nordic-Darker-Cosmic/rocinante-nord03.png
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/andre/.themes/Nordic-Darker-Cosmic/rocinante-nord03.png'
+# chang gdm background to home/andre/.themes/Nordic-Darker-Cosmic/rocinante-nord03.png
+# download file from https://github.com/thiggy01/gdm-background/releases/download/v1.0/gdm-background_1.0_amd64.deb
+gh release download --repo https://github.com/thiggy01/gdm-background.git --pattern '*.deb' && sudo dpkg -i gdm-background_1.0_amd64.deb
+# install gdm-background
