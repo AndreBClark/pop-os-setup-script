@@ -1,17 +1,14 @@
 #!/bin/bash
+sudo add-apt-repository universe -y
+sudo add-apt-repository multiverse -y
+sudo apt update -y
 
 # install fire-code font
 sudo apt install fonts-firecode
 
-gh release download --repo https://github.com/rsms/inter.git --pattern "*.zip"
-# unzip the font
-unzip inter-*.zip
-# move the font to the right place
-sudo mv inter-* /usr/share/fonts/truetype/
-# update font cache
-sudo fc-cache -f -v
+sudo apt install fonts-inter
 
 # set inter as default font
 gsettings set org.gnome.desktop.interface font-name 'Inter Bold'
 # set fira code as default monospace font
-gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Code'
+gsettings set org.gnome.desktop.interface monospace-font-name 'Fira Code Regular'
